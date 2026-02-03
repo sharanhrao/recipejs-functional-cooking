@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeJS • Functional Cooking</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <h1>🍳 RecipeJS</h1>
+        <p>Functional Cooking with Filters & Sorting</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="app-container">
+
+        <!-- Controls -->
+        <section class="controls glass">
+            <div class="control-group">
+                <h3>Filter Recipes</h3>
+                <div class="button-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="easy">Easy</button>
+                    <button class="filter-btn" data-filter="medium">Medium</button>
+                    <button class="filter-btn" data-filter="hard">Hard</button>
+                    <button class="filter-btn" data-filter="quick">⏱ Under 30 min</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Sort Recipes</h3>
+                <div class="button-group">
+                    <button class="sort-btn" data-sort="name">A–Z</button>
+                    <button class="sort-btn" data-sort="time">Fastest</button>
+                    <button class="sort-btn active" data-sort="none">Default</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Cards -->
+        <section id="recipe-container" class="recipe-grid">
+            <!-- JS renders cards here -->
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
