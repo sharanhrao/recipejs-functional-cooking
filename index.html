@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RecipeJS - Your Functional Cooking Companion</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeJS - Your Functional Cooking Companion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<!-- Header Section -->
+
 <header>
-<h1>RecipeJS</h1>
-<p>Your Functional Cooking Companion</p>
+    <h1>RecipeJS</h1>
+    <p>Your Functional Cooking Companion</p>
+
+    <!-- Search -->
+    <div class="search-container">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search recipes or ingredients..."
+            autocomplete="off"
+        />
+
+        <button id="clear-search" class="clear-btn" style="display:none;">✕</button>
+    </div>
 </header>
-<!-- Main Content -->
+
 <main>
-<div id="recipe-container">
-<!-- Recipe cards will be rendered here by JavaScript -->
-</div>
+
+    <div class="controls">
+
+        <div class="filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="easy">Easy</button>
+            <button data-filter="medium">Medium</button>
+            <button data-filter="hard">Hard</button>
+            <button data-filter="quick">Quick (&lt;30min)</button>
+            <button data-filter="favorites">❤️ Favorites</button>
+        </div>
+
+        <div class="sorts">
+            <button data-sort="none" class="active">Default</button>
+            <button data-sort="name">Sort by Name</button>
+            <button data-sort="time">Sort by Time</button>
+        </div>
+
+    </div>
+
+    <!-- Counter -->
+    <div class="recipe-info">
+        <p id="recipe-counter">Showing 0 of 0 recipes</p>
+    </div>
+
+    <div id="recipe-container"></div>
+
 </main>
+
 <script src="app.js"></script>
+
 </body>
 </html>
